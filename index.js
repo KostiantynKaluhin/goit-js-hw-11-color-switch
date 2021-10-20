@@ -10,7 +10,7 @@ const bodyRef = document.querySelector('body');
 const buttonsContainerRef = document.querySelector('#buttons');
 const startButtonRef = document.querySelector('.js-start');
 const stopButtonRef = document.querySelector('.js-stop');
-buttonsContainerRef.addEventListener('click', buttonsFunctions);
+buttonsContainerRef.addEventListener('click', buttonsFunction);
 
 const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -27,7 +27,7 @@ stopButtonRef.disabled = true;
 
 let colorInterval;
 
-function buttonsFunctions(event, randomColor) {
+function buttonsFunction(event, randomColor) {
   if (event.target.textContent === 'Start') {
     startButtonRef.disabled = true;
     stopButtonRef.disabled = false;
